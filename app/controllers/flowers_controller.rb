@@ -14,6 +14,21 @@ class FlowersController < ApplicationController
     end
   end
 
+  def show
+    @flower = Flower.find(params[:id])
+  end
+
+  def edit
+    @flower = Flower.find(params[:id])
+  end
+
+  def update
+    @flower = Flower.find(params[:id])
+    @flower.update_attributes!(flower_params)
+
+    redirect_to flowers_path(@flower)
+  end
+
   private
   def flower_params
     params.require(:flower).permit(:name, :color)

@@ -8,14 +8,6 @@
     <%= f.text_field :color %>
   </p>
   <p>
-    <%= f.submit 'Add flower' %>
+    <%= f.submit 'Update flower' %>
   </p>
-<% end %>
-
-<%= @flowers.each do |flower| %>
-<ul>
-  <li>
-    <%= link_to "#{flower.name}", flower_path(flower) %>, <%= flower.color %>
-  </li>
-</ul>
 <% end %>
