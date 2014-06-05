@@ -4,4 +4,5 @@
   </li>
 </ul>
 
-<%= link_to 'Edit', edit_flower_path(@flower) %>
+<%= link_to 'Edit', edit_flower_path(@flower) %> |
+<%= link_to 'Delete flower', flower_path(@flower), method: :delete %>

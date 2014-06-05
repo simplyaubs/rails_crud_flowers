@@ -29,6 +29,12 @@ class FlowersController < ApplicationController
     redirect_to flowers_path(@flower)
   end
 
+  def destroy
+    @flower = Flower.find(params[:id]).delete
+
+    redirect_to flowers_path
+  end
+
   private
   def flower_params
     params.require(:flower).permit(:name, :color)
