@@ -1,0 +1,21 @@
+<%= form_for @flower do |f| %>
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</p>
+  <p>
+    <%= f.label :color %>
+    <%= f.text_field :color %>
+  </p>
+  <p>
+    <%= f.submit 'Add flower' %>
+  </p>
+<% end %>
+
+<%= @flowers.each do |flower| %>
+<ul>
+  <li>
+    <%= flower.name %>, <%= flower.color %>
+  </li>
+</ul>
+<% end %>
